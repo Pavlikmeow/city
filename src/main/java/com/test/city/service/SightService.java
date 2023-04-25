@@ -1,6 +1,6 @@
 package com.test.city.service;
 
-import com.test.city.data.dto.NewSight;
+import com.test.city.data.dto.CreateSightRequest;
 import com.test.city.data.dto.SightDTO;
 import com.test.city.data.entity.City;
 import com.test.city.data.entity.Sight;
@@ -23,11 +23,11 @@ public class SightService {
     private final SightMapper sightMapper;
     private final CityService cityService;
 
-    public void createNewSight(NewSight newSight) {
-        UUID cityId = newSight.getCityId();
+    public void createNewSight(CreateSightRequest createSightRequest) {
+        UUID cityId = createSightRequest.getCityId();
         City city = cityService.getCityById(cityId);
 
-        Sight sight = sightMapper.mapToSight(newSight);
+        Sight sight = sightMapper.mapToSight(createSightRequest);
         sight.setCity(city);
         sightRepository.save(sight);
     }
