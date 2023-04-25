@@ -27,6 +27,7 @@ public class Sight {
             strategy = "org.hibernate.id.UUIDGenerator"
     )
     @Column(name = "id", updatable = false, nullable = false)
+    @JsonIgnore
     private UUID id;
     @Column(name = "name")
     private String name;
