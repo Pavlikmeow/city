@@ -1,0 +1,6 @@
+-- SCHEMA: city
+
+-- DROP SCHEMA IF EXISTS city ;
+
+CREATE SCHEMA IF NOT EXISTS city
+    AUTHORIZATION test;
