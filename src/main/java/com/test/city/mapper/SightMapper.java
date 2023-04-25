@@ -1,6 +1,6 @@
 package com.test.city.mapper;
 
-import com.test.city.data.dto.NewSight;
+import com.test.city.data.dto.CreateSightRequest;
 import com.test.city.data.dto.SightDTO;
 import com.test.city.data.entity.Sight;
 import org.mapstruct.Mapper;
@@ -10,6 +10,6 @@ public interface SightMapper {
 
     SightDTO mapToSightDTO(Sight sight);
 
-    Sight mapToSight(NewSight newSight);
+    Sight mapToSight(CreateSightRequest createSightRequest);
 
 }
