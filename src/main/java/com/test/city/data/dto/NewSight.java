@@ -1,21 +1,23 @@
 package com.test.city.data.dto;
 
-import com.test.city.data.entity.Sight;
+import com.test.city.data.entity.City;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.UUID;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CityDto {
+public class NewSight {
+
     private String name;
-    private String country;
-    private int area;
-    private int population;
-    private List<Sight> sightList;
+    private String type;
+    private String address;
+    private String architect;
+    private UUID cityId;
+
 }

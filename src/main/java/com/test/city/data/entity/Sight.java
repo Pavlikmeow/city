@@ -1,5 +1,8 @@
 package com.test.city.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +19,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Sight {
+
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(
@@ -33,7 +37,9 @@ public class Sight {
     @Column(name = "architect")
     private String architect;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "city_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    @JsonIgnore
     private City city;
+
 }
