@@ -1,6 +1,5 @@
 package com.test.city.data.dto;
 
-import com.test.city.data.entity.City;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +11,7 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class NewSight {
+public class CreateSightRequest {
 
     private String name;
     private String type;

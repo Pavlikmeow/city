@@ -1,9 +1,7 @@
 package com.test.city.controller;
 
-import com.test.city.data.dto.NewSight;
+import com.test.city.data.dto.CreateSightRequest;
 import com.test.city.data.dto.SightDTO;
-import com.test.city.data.entity.City;
-import com.test.city.data.entity.Sight;
 import com.test.city.service.SightService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +17,8 @@ public class SightController {
     private final SightService sightService;
 
     @PostMapping
-    public void createNewSight(@RequestBody NewSight newSight) {
-        sightService.createNewSight(newSight);
+    public void createNewSight(@RequestBody CreateSightRequest createSightRequest) {
+        sightService.createNewSight(createSightRequest);
     }
 
     @GetMapping
