@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: city
+  datasource:
+    url: jdbc:postgresql://localhost:5432/city
+    username: test
+    password: test
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    default-schema: city
+server:
+  port: 8080
