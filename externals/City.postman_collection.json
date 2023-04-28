@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "0d79912a-c91b-4c24-9e7b-dbe971e2c5e8",
+		"name": "City",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22712495"
+	},
+	"item": [
+		{
+			"name": "GetAllCities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/city",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCityById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/city/a6025fa1-37da-4e71-87ef-511118bb8f56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"a6025fa1-37da-4e71-87ef-511118bb8f56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSightById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sight/a6025fa1-37da-4e71-87ef-511118bb8f56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sight",
+						"a6025fa1-37da-4e71-87ef-511118bb8f56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCityById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/city/a6025fa1-37da-4e71-87ef-511118bb8f56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"a6025fa1-37da-4e71-87ef-511118bb8f56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSightById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sight/a6025fa1-37da-4e71-87ef-511118bb8f56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sight",
+						"a6025fa1-37da-4e71-87ef-511118bb8f56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeCityNameById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/city/a6025fa1-37da-4e71-87ef-511118bb8f56/newName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"a6025fa1-37da-4e71-87ef-511118bb8f56",
+						"newName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeSightNameById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sight/a6025fa1-37da-4e71-87ef-511118bb8f56/newName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sight",
+						"a6025fa1-37da-4e71-87ef-511118bb8f56",
+						"newName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/city",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewSight",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"newSight\",\r\n    \"type\": \"newSight\",\r\n    \"address\": \"newSight\",\r\n    \"architect\": \"newSight\",\r\n    \"cityId\" : \"cfbd2c69-ba65-49d9-b471-8bf8f2ac0247\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sight"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
